@@ -5,16 +5,23 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "weppack-dev-server --hot --inline"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "cross-env": "^7.0.2",
     "css": "^2.2.4",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "stylus": "^0.54.7",
     "swiper": "^5.3.8",
+    "url-loader": "^4.1.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
-    "vuex": "^3.1.3"
+    "vuex": "^3.1.3",
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

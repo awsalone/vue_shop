@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 import '../static/css/reset.css'
 Vue.config.productionTip = false
-
+const isProd = process.env.NODE_ENV === 'production'
+if (!isProd) {
+  Vue.config.devtools = true
+}
 new Vue({
   router,
   store,

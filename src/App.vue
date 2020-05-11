@@ -5,10 +5,19 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import FootGuild from './component/FootGuild/FootGuild'
 export default {
   components: {
     FootGuild
+  },
+  mounted () {
+    this.getAddress()
+    this.getCategorys()
+    this.getShops()
+  },
+  methods: {
+    ...mapActions(['getAddress', 'getCategorys', 'getShops'])
   }
 }
 </script>
