@@ -2,7 +2,7 @@
 接受接口请求函数
 */
 import ajax from './ajax'
-const BASE_URL = 'http://localhost:4000'
+const BASE_URL = process.env.NODE_ENV === 'development' ? '/api' : `/abc`
 // [1、根据经纬度获取位置详情](#1根据经纬度获取位置详情)
 export const reqAddress = (geohash) => ajax(`${BASE_URL}/position/${geohash}`)
 // [2、获取食品分类列表](#2获取食品分类列表)

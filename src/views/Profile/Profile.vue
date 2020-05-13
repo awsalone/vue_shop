@@ -3,17 +3,17 @@
     <section class="profile">
       <HeadTop title="我的"></HeadTop>
       <section class="profile-number">
-        <router-link to="/login" class="profile-link">
+        <router-link :to="userInfo._id? '/userInfo': '/login'" class="profile-link">
           <div class="profile_image">
             <i class="iconfont icon-person"></i>
           </div>
           <div class="user-info">
-            <p class="user-info-top">登录/注册</p>
+            <p class="user-info-top" v-if="!userInfo.phone">{{userInfo.name || '登陆/注册'}}</p>
             <p>
               <span class="user-icon">
                 <i class="iconfont icon-shouji icon-mobile"></i>
               </span>
-              <span class="icon-mobile-number">暂无绑定手机号</span>
+              <span class="icon-mobile-number">{{userInfo.phone||'暂无绑定手机号'}}</span>
             </p>
           </div>
           <span class="arrow">
@@ -95,15 +95,43 @@
           </div>
         </a>
       </section>
+      <section class="profile_info_data border-1px">
+        <mt-button type="danger" @click="logOut" style="width:100%" v-if="userInfo._id">退出登陆</mt-button>
+      </section>
     </section>
   </div>
 </template>
 
 <script>
+import { MessageBox, Toast } from 'mint-ui'
+import { mapState } from 'vuex'
 import HeadTop from '../../component/head/head'
 export default {
+  computed: {
+    ...mapState(['userInfo'])
+  },
   components: {
     HeadTop
+  },
+  methods: {
+    logOut () {
+      MessageBox.confirm('确定退出?').then(action => {
+        // ajax退出请求
+        this.$store.dispatch('logout')
+        Toast({
+          message: '用户登出',
+          position: 'bottom',
+          duration: 1000
+        })
+      }, action => {
+        Toast({
+          message: '已取消',
+          position: 'bottom',
+          duration: 1000
+        })
+      }
+      )
+    }
   }
 }
 </script>
@@ -168,6 +196,7 @@ export default {
           }
 
           .icon-mobile-number {
+            margin-left: 5px;
             font-size: 14px;
             color: #fff;
           }

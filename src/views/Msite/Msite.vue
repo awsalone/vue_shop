@@ -2,12 +2,15 @@
   <section class="msite">
     <!--首页头部-->
     <HeadTop :title="address.name">
-      <span class="header_search" slot="left">
+      <router-link class="header_search" slot="left" to="/search">
         <i class="iconfont icon-sousuo"></i>
-      </span>
-      <span class="header_login" slot="right">
-        <span class="header_login_text">登录|注册</span>
-      </span>
+      </router-link>
+      <router-link class="header_login" slot="right" :to="userInfo?'/userInfo':'/login'">
+        <span class="header_login_text" v-if="!userInfo._id">登陆|注册</span>
+        <span class="header_login_text" v-else>
+          <i class="iconfont icon-person"></i>
+        </span>
+      </router-link>
     </HeadTop>
 
     <!--首页导航-->
@@ -53,7 +56,7 @@ export default {
     shopList
   },
   computed: {
-    ...mapState(['address', 'categorys']),
+    ...mapState(['address', 'categorys', 'userInfo']),
     // 使用categorys创建二维数组
     categoryArry () {
       const { categorys } = this
