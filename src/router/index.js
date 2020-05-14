@@ -5,6 +5,10 @@ import Order from '../views/Order/Order'
 import Profile from '../views/Profile/Profile'
 import Search from '../views/Search/Search'
 import Login from '../views/Login/Login'
+import Shop from '../views/Shop/Shop'
+import ShopGoods from '../views/Shop/ShopGoods/ShopGoods.vue'
+import ShopInfo from '../views/Shop/ShopInfo/ShopInfo'
+import ShopRating from '../views/Shop/ShopRating/ShopRating'
 
 Vue.use(VueRouter)
 
@@ -38,6 +42,16 @@ const routes = [{
 }, {
   path: '/',
   redirect: '/msite'
+},
+{
+  path: '/shop',
+  component: Shop,
+  children: [
+    { path: '/goods', component: ShopGoods },
+    { path: '/info', component: ShopInfo },
+    { path: '/rating', component: ShopRating },
+    { path: '', redirect: '/goods' }
+  ]
 }
 ]
 
