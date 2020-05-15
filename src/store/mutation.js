@@ -1,7 +1,6 @@
 /*
 直接更新state
 */
-
 import {
   RECEIVE_ADDRESS,
   RECEIVE_CATEGORYS,
