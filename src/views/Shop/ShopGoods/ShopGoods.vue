@@ -67,7 +67,7 @@ export default {
       scrollY: 0,
       tops: [],
       index: '',
-      food: {}, // 显示的food
+      food: {}, // 显示的food图片
       foodShow: false
     }
   },
@@ -92,10 +92,13 @@ export default {
   },
   methods: {
     initScroll () {
-      // eslint-disable-next-line no-unused-vars
       this.foodsScroll = new BScroll('.foods-wrapper', {
         probeType: 2,
-        click: true
+
+        mouseWheel: true, // 开启鼠标滚轮
+        disableMouse: false, // 启用鼠标拖动
+        disableTouch: false // 启用手指触摸
+
       })
 
       // eslint-disable-next-line no-new

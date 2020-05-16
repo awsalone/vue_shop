@@ -16,35 +16,41 @@
           <div class="pay" :class="payClass">{{payText}}</div>
         </div>
       </div>
-      <div class="shopcart-list" v-show="showList">
-        <div class="list-header">
-          <h1 class="title">购物车</h1>
-          <span class="empty" @click="clearCart">清空</span>
-        </div>
-        <div class="list-content">
-          <ul>
-            <li class="food" v-for="(item,index) in cartFoods" :key="index">
-              <span class="name">{{item.name}}</span>
-              <div class="price">
-                <span>￥{{item.price}}</span>
-              </div>
-              <div class="cartcontrol-wrapper">
-                <div class="cartcontrol">
-                  <Cartcontrol :food="item"></Cartcontrol>
+      <transition name="move">
+        <div class="shopcart-list" v-show="showList">
+          <div class="list-header">
+            <h1 class="title">购物车</h1>
+            <span class="empty" @click="clearCart">清空</span>
+          </div>
+          <div class="list-content">
+            <ul>
+              <li class="food" v-for="(item,index) in cartFoods" :key="index">
+                <span class="name">{{item.name}}</span>
+                <div class="price">
+                  <span>￥{{item.price}}</span>
                 </div>
-              </div>
-            </li>
-          </ul>
+                <div class="cartcontrol-wrapper">
+                  <div class="cartcontrol">
+                    <Cartcontrol :food="item"></Cartcontrol>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </transition>
     </div>
-    <div class="list-mask" v-show="showList" @click="toggleShow"></div>
+    <transition name="fade">
+      <div class="list-mask" v-show="showList" @click="toggleShow"></div>
+    </transition>
   </div>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import { MessageBox } from 'mint-ui'
 import Cartcontrol from '../CartControl/CartControl'
+import BScroll from 'better-scroll'
 export default {
   data () {
     return {
@@ -54,11 +60,13 @@ export default {
   computed: {
     ...mapState(['cartFoods', 'info']),
     ...mapGetters(['totalPrice', 'totalCount']),
+    // 购物车按键class控制
     payClass () {
       const { totalPrice } = this
       const { minPrice } = this.info
       return totalPrice >= minPrice ? 'enough' : 'not-enough'
     },
+    // 购物车按键text控制
     payText () {
       const { totalPrice } = this
       const { minPrice } = this.info
@@ -71,10 +79,25 @@ export default {
       }
     },
     showList () {
+      // 购物车为空
       if (this.totalCount === 0) {
         // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.show = false
         return false
+      }
+      if (this.show) {
+        // 唯一创建
+        if (!this.scroll) {
+          // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+          this.scroll = new BScroll('.list-content', {
+            mouseWheel: true, // 开启鼠标滚轮
+            disableMouse: false, // 启用鼠标拖动
+            disableTouch: false // 启用手指触摸
+          })
+        } else {
+          // 刷新滚动条
+          this.scroll.refresh()
+        }
       }
       return this.show
     }
@@ -84,10 +107,29 @@ export default {
       this.show = !this.show
     },
     clearCart () {
-      this.$store.dispatch('clearCart')
+      MessageBox.confirm('确定清空购物车吗？').then(action => {
+        this.$store.dispatch('clearCart')
+      })
+
       this.toggleShow()
     }
   },
+  // watch: {
+  //   cartFoods () {
+  //     this.$nextTick(() => {
+  //       if (!this.scroll) {
+  //         // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+  //         this.scroll = new BScroll('.list-content', {
+  //           mouseWheel: true, // 开启鼠标滚轮
+  //           disableMouse: false, // 启用鼠标拖动
+  //           disableTouch: false // 启用手指触摸
+  //         })
+  //       } else {
+  //         this.scroll.refresh()
+  //       }
+  //     })
+  //   }
+  // },
   components: {
     Cartcontrol
   }
