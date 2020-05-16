@@ -100,10 +100,15 @@ export default {
       const { ratings, onlyText, selectType } = this
       return ratings.filter(rating => {
         const { rateType, text } = rating
-        /*   (selectType === 2 || selectType === rateType)
-              onlyText:true/false  ||   !text.length>0
+        /*  1. rate分类条件
+        selectType === 2 || selectType === rateType
+        selectType为2时显示全部无需再判断
+        若selectType为假，判断满意/不满意状态且必为真
+        2.是否只显示有内容文本的条件
+              onlyText:true/false  ||   text.length>0
+              onlyText为false时，无条件。不方便运算符判断，使用！onlyText
+              ！onlyText 只显示内容文本时为false，与text.length>0 匹配
         */
-
         return (selectType === 2 || selectType === rateType) && (!onlyText || text.length > 0)
       })
     }
