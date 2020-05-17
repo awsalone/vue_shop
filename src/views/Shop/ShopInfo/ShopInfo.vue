@@ -73,20 +73,31 @@ export default {
       typeList: ['activity-green', 'activity-red', 'activity-orange']
     }
   },
+  mounted () {
+    if (!this.info.pics) {
+      return
+    }
+    this.initScroll()
+  },
+  methods: {
+    initScroll () {
+      // eslint-disable-next-line no-new
+      new BScroll('.shop-info', {})
+      const ul = this.$refs.picsUl
+      const liWidth = 120
+      const space = 6
+      const count = this.info.pics.length
+      ul.style.width = (liWidth + space) * count - space + 'px'
+      // eslint-disable-next-line no-new
+      new BScroll('.pic-wrapper', {
+        scrollX: true
+      })
+    }
+  },
   watch: {
     info () {
       this.$nextTick(() => {
-        // eslint-disable-next-line no-new
-        new BScroll('.shop-info')
-        const ul = this.$refs.picsUl
-        const liWidth = 120
-        const space = 6
-        const count = this.info.pics.length
-        ul.style.width = (liWidth + space) * count - space + 'px'
-        // eslint-disable-next-line no-new
-        new BScroll('.pic-wrapper', {
-          scrollX: true
-        })
+        this.initScroll()
       })
     }
   },

@@ -2,8 +2,14 @@
   <div>
     <HeadTop title="搜索"></HeadTop>
     <section class="search">
-      <form class="search_form" action="#">
-        <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input" />
+      <form class="search_form" action="#" @submit.prevent="search">
+        <input
+          type="search"
+          name="search"
+          placeholder="请输入商家或美食名称"
+          class="search_input"
+          v-model="keyWord"
+        />
         <input type="submit" name="submit" class="search_submit" />
       </form>
     </section>
@@ -13,8 +19,21 @@
 <script>
 import HeadTop from '../../component/head/head'
 export default {
+  data () {
+    return {
+      keyWord: ''
+    }
+  },
   components: {
     HeadTop
+  },
+  methods: {
+    search () {
+      const keyWord = this.keyWord.trim()
+      if (keyWord) {
+        this.$store.dispatch('searchShops', keyWord)
+      }
+    }
   }
 }
 </script>

@@ -22,7 +22,7 @@
             <h1 class="title">购物车</h1>
             <span class="empty" @click="clearCart">清空</span>
           </div>
-          <div class="list-content">
+          <div class="list-content" ref="listContent">
             <ul>
               <li class="food" v-for="(item,index) in cartFoods" :key="index">
                 <span class="name">{{item.name}}</span>
@@ -86,18 +86,20 @@ export default {
         return false
       }
       if (this.show) {
-        // 唯一创建
-        if (!this.scroll) {
-          // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-          this.scroll = new BScroll('.list-content', {
-            mouseWheel: true, // 开启鼠标滚轮
-            disableMouse: false, // 启用鼠标拖动
-            disableTouch: false // 启用手指触摸
-          })
-        } else {
-          // 刷新滚动条
-          this.scroll.refresh()
-        }
+        this.$nextTick(() => {
+          // 唯一创建
+          if (!this.scroll) {
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.scroll = new BScroll(this.$refs.listContent, {
+              mouseWheel: true, // 开启鼠标滚轮
+              disableMouse: false, // 启用鼠标拖动
+              disableTouch: false // 启用手指触摸
+            })
+          } else {
+            // 刷新滚动条
+            this.scroll.refresh()
+          }
+        })
       }
       return this.show
     }
