@@ -13,8 +13,7 @@
     "sellCount": 90,
     "distance": "1000m",
     "bulletin": "是以粥为特色的中式营养快餐，自2004年10月18日创立“嘉和一品”品牌至今，不断优化管理，积极创新，立足于“贴近百姓生活，服务千家万户”",
-    "supports": [
-      {
+    "supports": [{
         "type": 0,
         "name": "首单",
         "content": "新用户下单立减17元(不与其它活动同享)"
@@ -69,12 +68,10 @@
     "address": "北京市丰台区太平桥44号",
     "workTime": "09:35-24:00"
   },
-  "goods": [
-    {
+  "goods": [{
       "name": "优惠",
       "icon": "https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png",
-      "foods": [
-        {
+      "foods": [{
           "name": "南瓜粥",
           "price": 9,
           "oldPrice": "",
@@ -82,8 +79,7 @@
           "sellCount": 91,
           "rating": 100,
           "info": "主、辅料:水、大米、南瓜、冰糖等",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -121,8 +117,7 @@
           "sellCount": 86,
           "rating": 100,
           "info": "美肤粥对皮肤有很好的保养作用",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -160,8 +155,7 @@
           "sellCount": 84,
           "rating": 100,
           "info": "八宝酱菜八宝酱菜八宝酱菜八宝酱菜八宝酱菜",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -193,8 +187,7 @@
           "description": "",
           "sellCount": 188,
           "rating": 96,
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -228,8 +221,7 @@
           "sellCount": 124,
           "rating": 85,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -262,8 +254,7 @@
           "sellCount": 114,
           "rating": 91,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -296,8 +287,7 @@
           "sellCount": 101,
           "rating": 78,
           "info": "招牌猪肉白菜锅贴招牌猪肉白菜锅贴招牌猪肉白菜锅贴",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -327,8 +317,7 @@
     {
       "name": "折扣",
       "icon": "https://fuss10.elemecdn.com/0/6a/05b267f338acfeb8bd682d16e836dpng.png",
-      "foods": [
-        {
+      "foods": [{
           "name": "娃娃菜炖豆腐",
           "price|10-20": 20,
           "oldPrice": "",
@@ -336,8 +325,7 @@
           "sellCount": 43,
           "rating": 92,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -363,8 +351,7 @@
           "sellCount": 29,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -390,8 +377,7 @@
           "sellCount": 15,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -413,8 +399,7 @@
     },
     {
       "name": "香浓甜粥",
-      "foods": [
-        {
+      "foods": [{
           "name": "红枣山药粥",
           "price": 29,
           "oldPrice": 36,
@@ -422,15 +407,13 @@
           "sellCount": 17,
           "rating": 100,
           "info": "红枣山药糙米粥,素材包,爽口莴笋丝,四川泡菜或八宝酱菜,配菜可备注",
-          "ratings": [
-            {
-              "username": "2******3",
-              "rateTime": 1469271264000,
-              "rateType": 0,
-              "text": "",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            }
-          ],
+          "ratings": [{
+            "username": "2******3",
+            "rateTime": 1469271264000,
+            "rateType": 0,
+            "text": "",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          }],
           "icon": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/114/h/114",
           "image": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/750/h/750"
         },
@@ -442,15 +425,13 @@
           "sellCount": 17,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
-              "username": "2******3",
-              "rateTime": 1469271264000,
-              "rateType": 0,
-              "text": "",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            }
-          ],
+          "ratings": [{
+            "username": "2******3",
+            "rateTime": 1469271264000,
+            "rateType": 0,
+            "text": "",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          }],
           "icon": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/114/h/114",
           "image": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/750/h/750"
         },
@@ -462,8 +443,7 @@
           "sellCount": 81,
           "rating": 91,
           "info": "红枣山药糙米粥红枣山药糙米粥红枣山药糙米粥",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -496,8 +476,7 @@
           "sellCount": 80,
           "rating": 93,
           "info": "糊塌子糊塌子糊塌子糊塌子糊塌子糊塌子",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -526,40 +505,36 @@
     },
     {
       "name": "营养咸粥",
-      "foods": [
-        {
-          "name": "田园蔬菜粥",
-          "price": 8,
-          "oldPrice": 10,
-          "description": "",
-          "sellCount": 15,
-          "rating": 100,
-          "info": "",
-          "ratings": [
-            {
-              "username": "3******c",
-              "rateTime": 1469281964000,
-              "rateType": 0,
-              "text": "还可以",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            },
-            {
-              "username": "2******3",
-              "rateTime": 1469271264000,
-              "rateType": 0,
-              "text": "",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            }
-          ],
-          "icon": "https://fuss10.elemecdn.com/5/7b/0af500733bb676d2a0a329ef1a078jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
-          "image": "https://fuss10.elemecdn.com/5/7b/0af500733bb676d2a0a329ef1a078jpeg.jpeg?imageMogr/format/webp/thumbnail/!750x750r/gravity/Center/crop/750x750/"
-        }
-      ]
+      "foods": [{
+        "name": "田园蔬菜粥",
+        "price": 8,
+        "oldPrice": 10,
+        "description": "",
+        "sellCount": 15,
+        "rating": 100,
+        "info": "",
+        "ratings": [{
+            "username": "3******c",
+            "rateTime": 1469281964000,
+            "rateType": 0,
+            "text": "还可以",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          },
+          {
+            "username": "2******3",
+            "rateTime": 1469271264000,
+            "rateType": 0,
+            "text": "",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          }
+        ],
+        "icon": "https://fuss10.elemecdn.com/5/7b/0af500733bb676d2a0a329ef1a078jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+        "image": "https://fuss10.elemecdn.com/5/7b/0af500733bb676d2a0a329ef1a078jpeg.jpeg?imageMogr/format/webp/thumbnail/!750x750r/gravity/Center/crop/750x750/"
+      }]
     },
     {
       "name": "爽口凉菜",
-      "foods": [
-        {
+      "foods": [{
           "name": "八宝酱菜",
           "price": 4,
           "oldPrice": "",
@@ -567,8 +542,7 @@
           "sellCount": 84,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -601,8 +575,7 @@
           "sellCount": 28,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -631,8 +604,7 @@
     },
     {
       "name": "精选套餐",
-      "foods": [
-        {
+      "foods": [{
           "name": "红豆薏米粥套餐",
           "price": 37,
           "oldPrice": "",
@@ -640,15 +612,13 @@
           "sellCount": 3,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
-              "username": "2******3",
-              "rateTime": 1469271264000,
-              "rateType": 0,
-              "text": "",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            }
-          ],
+          "ratings": [{
+            "username": "2******3",
+            "rateTime": 1469271264000,
+            "rateType": 0,
+            "text": "",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          }],
           "icon": "http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114",
           "image": "http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750"
         },
@@ -660,15 +630,13 @@
           "sellCount": 12,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
-              "username": "2******3",
-              "rateTime": 1469271264000,
-              "rateType": 0,
-              "text": "",
-              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
-            }
-          ],
+          "ratings": [{
+            "username": "2******3",
+            "rateTime": 1469271264000,
+            "rateType": 0,
+            "text": "",
+            "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+          }],
           "icon": "http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114",
           "image": "http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750"
         }
@@ -676,8 +644,7 @@
     },
     {
       "name": "果拼果汁",
-      "foods": [
-        {
+      "foods": [{
           "name": "蜜瓜圣女萝莉杯",
           "price": 6,
           "oldPrice": "",
@@ -697,8 +664,7 @@
           "sellCount": 7,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -731,8 +697,7 @@
           "sellCount": 15,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -754,8 +719,7 @@
     },
     {
       "name": "小吃主食",
-      "foods": [
-        {
+      "foods": [{
           "name": "扁豆焖面",
           "price": 14,
           "oldPrice": "",
@@ -763,8 +727,7 @@
           "sellCount": 188,
           "rating": 96,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -797,8 +760,7 @@
           "sellCount": 124,
           "rating": 85,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -831,8 +793,7 @@
           "sellCount": 114,
           "rating": 91,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -865,8 +826,7 @@
           "sellCount": 101,
           "rating": 78,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 1,
@@ -899,8 +859,7 @@
           "sellCount": 80,
           "rating": 93,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -929,16 +888,14 @@
     },
     {
       "name": "特色粥品",
-      "foods": [
-        {
+      "foods": [{
           "name": "皮蛋瘦肉粥",
           "price": 10,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
           "rating": 100,
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -971,8 +928,7 @@
           "sellCount": 91,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -1005,8 +961,7 @@
           "sellCount": 86,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -1039,8 +994,7 @@
           "sellCount": 81,
           "rating": 91,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -1073,8 +1027,7 @@
           "sellCount": 56,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -1106,8 +1059,7 @@
           "sellCount": 33,
           "rating": 100,
           "info": "",
-          "ratings": [
-            {
+          "ratings": [{
               "username": "3******c",
               "rateTime": 1469281964000,
               "rateType": 0,
@@ -1135,8 +1087,7 @@
       ]
     }
   ],
-  "ratings": [
-    {
+  "ratings": [{
       "username": "3******c",
       "rateTime": 1469281964000,
       "deliveryTime": 30,

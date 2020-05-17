@@ -111,7 +111,7 @@ export default {
     clearCart () {
       MessageBox.confirm('确定清空购物车吗？').then(action => {
         this.$store.dispatch('clearCart')
-      })
+      }, action => { return false })
 
       this.toggleShow()
     }

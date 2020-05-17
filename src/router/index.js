@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Msite from '../views/Msite/Msite'
-import Order from '../views/Order/Order'
-import Profile from '../views/Profile/Profile'
-import Search from '../views/Search/Search'
 import Login from '../views/Login/Login'
 import Shop from '../views/Shop/Shop'
 import ShopGoods from '../views/Shop/ShopGoods/ShopGoods.vue'
 import ShopInfo from '../views/Shop/ShopInfo/ShopInfo'
 import ShopRating from '../views/Shop/ShopRating/ShopRating'
+// import Msite from '../views/Msite/Msite'
+// import Order from '../views/Order/Order'
+// import Profile from '../views/Profile/Profile'
+// import Search from '../views/Search/Search'
+// 路由懒加载
+const Msite = () => import('../views/Msite/Msite')
+const Order = () => import('../views/Order/Order')
+const Profile = () => import('../views/Profile/Profile')
+const Search = () => import('../views/Search/Search')
 
 Vue.use(VueRouter)
 

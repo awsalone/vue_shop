@@ -65,7 +65,7 @@
                 ></span>
                 <span class="item" v-for="(item,index) in rating.recommend" :key="index">{{item}}</span>
               </div>
-              <div class="time">{{rating.rateTime}}</div>
+              <div class="time">{{rating.rateTime|dateFormat}}</div>
             </div>
           </li>
         </ul>
@@ -325,6 +325,7 @@ export default {
         .star-wrapper {
           margin-bottom: 6px;
           font-size: 0;
+          height: 12px;
 
           .star {
             display: inline-block;
@@ -359,7 +360,7 @@ export default {
           }
 
           .icon-thumb_up {
-            color: $yellow;
+            color: yellow;
           }
 
           .icon-thumb_down {
