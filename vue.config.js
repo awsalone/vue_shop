@@ -11,13 +11,6 @@ module.exports = {
   lintOnSave: true,
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: false,
-  // css相关配置
-  css: {
-    // 是否使用css分离插件 ExtractTextPlugin
-    extract: true,
-    // 开启 CSS source maps?
-    sourceMap: false
-  },
   // webpack-dev-server 相关配置
   devServer: {
     open: false, // open 在devServer启动且第一次构建完成时，自动用我们的系统的默认浏览器去打开要开发的网页
@@ -29,17 +22,11 @@ module.exports = {
     proxy: {
       '/api': {
         target: 'http://localhost:4000', // 目标接口域名
-        secure: false, // false为http访问，true为https访问
-        changeOrigin: true, // 是否跨域
+        changeOrigin: true,
         pathRewrite: {
-          '^/api': '' // 重写接口
+          '^/api': ''
         }
       }
-    }, // 设置代理
-    before: app => { }
-  },
-  // 第三方插件配置
-  pluginOptions: {
-    // ...
+    } // 设置代理
   }
 }
