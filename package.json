@@ -18,7 +18,7 @@
     "html-webpack-plugin": "^4.3.0",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.1.0",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "stylus": "^0.54.7",
     "swiper": "^5.3.8",
     "url-loader": "^4.1.0",
